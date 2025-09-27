@@ -23,14 +23,6 @@ while True:
         print("Invalid input! Please enter a valid number or 'end' to finish.")
 
 if numbers:
-    print(f"You entered {len(numbers)} numbers:")
-    print(f"Numbers: {numbers}")
-   
-else:
-    print("No numbers were entered.")
-
-
-if numbers:
     # Initialize min and max with the first number
     minimal = numbers[0]
     maximal = numbers[0]
@@ -47,11 +39,11 @@ else:
     maximal = None
 
 if numbers:
-    print(f"Minimal value: {minimal}")
-    print(f"Maximal value: {maximal}")
+    print(f"The list of numbers is: {numbers}")
+    print(f"The Minimal number is: {minimal}")
+    print(f"The Maximal number is: {maximal}")
 
 else:
     print("No numbers were entered.")
-    print(f"Minimal value: {minimal}")
-    print(f"Maximal value: {maximal}")
+  
 
