@@ -28,3 +28,30 @@ if numbers:
    
 else:
     print("No numbers were entered.")
+
+
+if numbers:
+    # Initialize min and max with the first number
+    minimal = numbers[0]
+    maximal = numbers[0]
+    
+    # Compare each number with current min and max
+    for number in numbers:
+        if number < minimal:
+            minimal = number
+        if number > maximal:
+            maximal = number
+else:
+    # Handle empty list case
+    minimal = None
+    maximal = None
+
+if numbers:
+    print(f"Minimal value: {minimal}")
+    print(f"Maximal value: {maximal}")
+
+else:
+    print("No numbers were entered.")
+    print(f"Minimal value: {minimal}")
+    print(f"Maximal value: {maximal}")
+
