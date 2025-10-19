@@ -43,5 +43,18 @@ for i in range(len(metrics)):
             markeredgewidth=1.5,
             label=metric)
 
+    
+    # Customize the subplot
+    ax.set_xlabel('Wind Speed (m/s)', fontsize=11, fontweight='bold')
+    ax.set_ylabel(metric, fontsize=11, fontweight='bold')
+    ax.set_title(f'{metric} vs Wind Speed', fontsize=12, fontweight='bold', pad=10)
+    
+    # Add grid with custom style
+    ax.grid(True, alpha=0.3, linestyle='--', linewidth=0.5)
+    ax.set_facecolor('#f8f9fa')
+    
+    # Format tick labels
+    ax.tick_params(axis='both', which='major', labelsize=10)
+
 # Show the plot
 plt.show()
