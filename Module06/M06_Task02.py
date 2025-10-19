@@ -13,3 +13,35 @@ print("WIND TURBINE DATA ANALYSIS - TASK 2")
 print("=" * 60)
 print("\nData Summary:")
 print(df.describe())
+
+# Get the wind speed column and metrics
+wind_speed = df['Wind speed (m/s)']
+metrics = df.columns[1:]  # All columns except wind speed
+
+# Define colors for each metric
+colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4']
+markers = ['o', 's', '^', 'D']
+
+# Create the main figure with 2x2 subplots
+fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+axes = axes.flatten()
+
+# Plot each metric with custom styling
+for i in range(len(metrics)):
+    metric = metrics[i]
+    color = colors[i]
+    marker = markers[i]
+    ax = axes[i]
+    
+    # Plot the data with custom styling
+    ax.plot(wind_speed, df[metric], 
+            marker=marker, 
+            color=color,
+            linewidth=2.5, 
+            markersize=7,
+            markeredgecolor='white',
+            markeredgewidth=1.5,
+            label=metric)
+
+# Show the plot
+plt.show()
