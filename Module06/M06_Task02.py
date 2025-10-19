@@ -6,6 +6,7 @@ import pandas as pd
 file_path = 'C:/Users/pcber/OneDrive/Master_in_Wind_Energy/DTU_Master_in_Wind_Energy/' \
     '46W38 Scientific Programming for Wind Energy/Module06_Data Visualization with Matplotlib/Assignment/Module 6 - Exercises Data.xlsx'
 df = pd.read_excel(file_path, sheet_name='Exercise 2')
+print(df)
 
 # Print summary statistics
 print("=" * 60)
